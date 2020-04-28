@@ -1,0 +1,12 @@
+.table-container {
+    overflow-x: auto;
+}
+
+.has-navbar-fixed-top {
+    padding-top: 0rem !important;
+    margin-top: 3.25rem !important;
+}
+
+.footer {
+    padding: 2rem 1.5rem 2rem !important;
+}

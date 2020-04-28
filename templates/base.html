@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>YT Downloader</title>
+    <base target="_blank">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./static/script.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+
+<body>
+<nav class="navbar is-fixed-top is-info" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/" target="_top">
+            <b>YT Downloader</b>
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+            <a class="navbar-item" href="/about" target="_top">
+                About
+            </a>
+
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input id="link" class="input" type="text" placeholder="Enter a YouTube Link">
+                    </div>
+                    <div class="control">
+                        <button id="enter" class="button is-dark">
+                            Get
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+{% block content %} {% endblock %}
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Made by <a href="https://jchacko.dev">Jonathan Chacko</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+
+</html>

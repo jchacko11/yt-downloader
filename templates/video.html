@@ -1,0 +1,156 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<script>
+  $("body").addClass("has-navbar-fixed-top")
+</script>
+
+<section class="hero is-medium is-dark">
+	<div class="hero-body">
+		<div class="container">
+
+			<div class="columns is-vcentered">
+
+				<div class="column is-content">
+
+					<div class="intro-content">
+						<h1 class="title intro-title is-2">
+							{{title}}
+						</h1>
+
+						<h2 class="subtitle is-3">{{author}}</h2>
+						<!--h3 class="subtitle is-5">{{views}}</h3>
+            <h3 class="subtitle is-5">1 View</h3-->
+
+						<nav class="buttons">
+							<a class="button is-primary is-large" href="{{primary.url}}">
+								<span>
+                  <strong>Download</strong>
+                  <small>{{primary.resolution}}</small>
+                </span>
+              </a>
+              <a class="button is-light is-large" target="_top" href="#formats">
+                <span>
+                  <span>All formats</span>
+                </span>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="column image container">
+          <img src="{{thumbnail}}">
+
+
+        </div>
+      </div>
+  </div>
+  </div>
+  </section>
+  <div class="has-background-grey-lighter">
+    <div class="container is-success">
+
+      <a name="formats"></a>
+      <section class="section section is-small">
+      <h2 class="title is-3">All Formats</h2>
+      
+          <h2 class="title is-4">Video and Audio</h2>
+          <div class="table-container">
+            <table class="table has-background-white-ter">
+              <thead>
+                <tr>
+                  <th>itag</th>
+                  <th>Type</th>
+                  <th>Resolution</th>
+                  <th>Bit Rate</th>
+                  <th>FPS</th>
+                  <th>vcodec</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for stream in progressive %}
+                <tr>
+                  <td>{{stream.itag}}</td>
+                  <td>{{stream.mime_type}}</td>
+                  <td>{{stream.resolution}}</td>
+                  <td>{{stream.abr}}</td>
+                  <td>{{stream.fps}}</td>
+                  <td>{{stream.video_codec}}</td>
+                  <td><a href="{{stream.url}}" class="button is-link is-light">
+                    {{(stream.filesize/1000000)|round(1)|string + " MB"}}
+                  </a></td>
+                </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+          </div>
+
+        
+
+          <h2 class="title is-4">Audio Only</h2>
+            <div class="table-container">
+            <table class="table has-background-white-ter">
+              <thead>
+                <tr>
+                  <th>itag</th>
+                  <th>Type</th>
+                  <th>Bit Rate</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for stream in only_audio %}
+                <tr>
+                  <td>{{stream.itag}}</td>
+                  <td>{{stream.mime_type}}</td>
+                  <td>{{stream.abr}}</td>
+                  <td><a href="{{stream.url}}" class="button is-link is-light">
+                    {{(stream.filesize/1000000)|round(1)|string + " MB"}}
+                  </a></td>
+                </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+            </div>
+
+        
+
+          <h2 class="title is-4">Video Only</h2>
+          <div class="table-container">
+            <table class="table has-background-white-ter">
+              <thead>
+                <tr>
+                  <th>itag</th>
+                  <th>Type</th>
+                  <th>Resolution</th>
+                  <th>FPS</th>
+                  <th>vcodec</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for stream in only_video %}
+                <tr>
+                  <td>{{stream.itag}}</td>
+                  <td>{{stream.mime_type}}</td>
+                  <td>{{stream.resolution}}</td>
+                  <td>{{stream.fps}}</td>
+                  <td>{{stream.video_codec}}</td>
+                  <td><a href="{{stream.url}}" class="button is-link is-light">
+                    {{(stream.filesize/1000000)|round(1)|string + " MB"}}
+                  </a></td>
+                </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+          </div>
+
+
+      </section>
+    </div>
+	</div>
+  {% endblock %}

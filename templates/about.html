@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <script>
+        $("body").addClass("has-navbar-fixed-top")
+    </script>
+
+    <section class="section">
+        <div class="container">
+            <div class="content is-large">
+                <h3 class="title is-2">Usage</h3>
+                <p>To download a YouTube video, simply enter its link. Alternatively, replacing "www.youtube.com" with
+                    "yt.jchacko.dev" in the link will bring you to a download page.</p>
+                <p>For example this YouTube video:</p>
+                <pre>https://www.youtube.com/watch?v=IUyrlM1qkGU</pre>
+                <p>Can be downloaded here:</p>
+                <pre>https://yt.jchacko.dev/watch?v=IUyrlM1qkGU</pre>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
