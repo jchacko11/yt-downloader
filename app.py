@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 
 app = Flask('app')
 from pytube import YouTube
-from threading import Thread
 
 
 @app.route('/')
@@ -60,14 +59,5 @@ def hello_world():
     )
 
 
-def run():
-    app.run()
+app.run()
 
-
-def keep_alive():
-    t = Thread(target=run)
-    t.start()
-
-
-# keep_alive()
-run()
