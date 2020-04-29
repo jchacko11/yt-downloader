@@ -31,7 +31,7 @@ def hello_world():
         else:
             yt = YouTube("?v=" + v)
     except:
-        return render_template("vid_not_found.html")
+        return render_template("vid_not_found.html", yt=yt, v=v)
 
     streams = yt.streams
     title = yt.title
