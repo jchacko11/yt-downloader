@@ -10,3 +10,11 @@
 .footer {
     padding: 2rem 1.5rem 2rem !important;
 }
+
+.dark-link:hover{
+ color: hsl(0, 0%, 98%) !important;
+}
+
+.navbar-menu{
+    height: 56px;
+}

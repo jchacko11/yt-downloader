@@ -19,7 +19,10 @@ $(document).ready(function () {
     }
     $("#enter").click(function () {
         $("#link").parent().addClass("is-loading")
-        window.location = "/watch?url=" + $("#link").val()
+        if(!$("#link").val())
+            window.location = "/watch?url=" + "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        else
+            window.location = "/watch?url=" + $("#link").val()
     })
 
 

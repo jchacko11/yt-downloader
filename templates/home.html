@@ -1,25 +1,30 @@
- {% extends "base.html" %} 
- {% block content %}
+{% extends "base.html" %}
+{% block content %}
 
 
-<section class="hero is-fullheight is-dark">
-	<div class="hero-body">
-		<div class="container">
-			<h1 class="title intro-title is-2">
-				Download a YouTube Video
-			</h1>
+    <section class="hero is-fullheight is-dark">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title intro-title is-2">
+                    Download a YouTube Video
+                </h1>
 
-			<div class="field has-addons">
-				<div class="control is-expanded is-medium">
-					<input id = "link" class="input is-medium" type="text" placeholder="Enter a YouTube Link">
+                <div class="field has-addons">
+                    <div class="control is-expanded is-medium">
+                        <input id="link" class="input is-medium" type="text" placeholder="Enter a YouTube Link">
+                    </div>
+                    <div class="control">
+                        <button id="enter" class="button is-info is-medium">
+                            Get
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="">
+                    <a href="/watch" class="dark-link has-text-info is-size-5" target="_top">See a demo</a>
+                </div>
+            </div>
         </div>
-        <div class="control">
-          <button id="enter" class="button is-info is-medium">
-            Get
-          </button>
-        </div>
-        </div>
-			</div>
-		</div>
-	</section>
-  {% endblock %}
+    </section>
+{% endblock %}
