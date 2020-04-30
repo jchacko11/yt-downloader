@@ -17,8 +17,11 @@ $(document).ready(function () {
     if (length > 1) {
         $(".field.has-addons:first").remove()
     }
-    $("#enter").click(function () {
-        $("#link").parent().addClass("is-loading")
+
+    $(".yt-form").submit(function(e){
+        e.preventDefault()
+        $("#enter").addClass("is-loading")
+
         if(!$("#link").val())
             window.location = "/watch?url=" + "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         else
