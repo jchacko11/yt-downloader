@@ -19,20 +19,16 @@
                             </h1>
 
                             <h2 class="subtitle is-3">{{ author }}</h2>
-                            <!--h3 class="subtitle is-5">{{views}}</h3>
-            <h3 class="subtitle is-5">1 View</h3-->
 
                             <nav class="buttons">
                                 <a class="button is-primary is-large" href="{{ primary.url }}">
-								<span>
-                  <strong>Download</strong>
-                  <small>{{ primary.resolution }}</small>
-                </span>
+                                    <span>
+                                        <strong>Download</strong>
+                                        <small>{{ primary.resolution }}</small>
+                                    </span>
                                 </a>
                                 <a class="button is-light is-large" target="_top" href="#formats">
-                <span>
-                  <span>All formats</span>
-                </span>
+                                    <span>All formats</span>
                                 </a>
                             </nav>
                         </div>
@@ -78,7 +74,7 @@
                                 <td>{{ stream.fps }}</td>
                                 <td>{{ stream.video_codec }}</td>
                                 <td><a href="{{ stream.url }}" class="button is-link is-light">
-                                    {{ (stream.filesize/1000000)|round(1)|string + " MB" }}
+                                    {{ (stream.filesize/1048576)|round(1)|string + " MB" }}
                                 </a></td>
                             </tr>
                         {% endfor %}
@@ -106,7 +102,7 @@
                                 <td>{{ stream.mime_type }}</td>
                                 <td>{{ stream.abr }}</td>
                                 <td><a href="{{ stream.url }}" class="button is-link is-light">
-                                    {{ (stream.filesize/1000000)|round(1)|string + " MB" }}
+                                    {{ (stream.filesize/1048576)|round(1)|string + " MB" }}
                                 </a></td>
                             </tr>
                         {% endfor %}
@@ -138,7 +134,7 @@
                                 <td>{{ stream.fps }}</td>
                                 <td>{{ stream.video_codec }}</td>
                                 <td><a href="{{ stream.url }}" class="button is-link is-light">
-                                    {{ (stream.filesize/1000000)|round(1)|string + " MB" }}
+                                    {{ (stream.filesize/1048576)|round(1)|string + " MB" }}
                                 </a></td>
                             </tr>
                         {% endfor %}

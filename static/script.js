@@ -25,6 +25,5 @@ $(document).ready(function () {
             window.location = "/watch?url=" + $("#link").val()
     })
 
-
 });
 

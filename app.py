@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
+from pytube import YouTube
 
 app = Flask('app')
-from pytube import YouTube
 
 
 @app.route('/')
@@ -15,7 +15,7 @@ def about():
 
 
 @app.route('/watch')
-def hello_world():
+def video_info():
     url = False
     try:
         v = request.args["v"]
@@ -58,6 +58,6 @@ def hello_world():
         progressive=progressive
     )
 
+
 if __name__ == '__main__':
     app.run()
-
