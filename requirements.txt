@@ -4,6 +4,6 @@ gunicorn==20.0.4
 itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
-pytube3==9.6.4
 typing-extensions==3.7.4.2
 Werkzeug==1.0.1
+git+https://gitlab.com/obuilds/public/pytube@ob-v1
