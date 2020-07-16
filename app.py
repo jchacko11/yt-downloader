@@ -39,7 +39,7 @@ def video_info():
     author = yt.author
     views = yt.views
 
-    only_audio =streams.filter(only_audio=True)
+    only_audio = streams.filter(only_audio=True)
     only_video = streams.filter(only_video=True)
     progressive = streams.filter(progressive=True)
 
