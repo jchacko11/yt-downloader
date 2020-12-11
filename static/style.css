@@ -20,3 +20,7 @@
         height: 56px;
     }
 }
+
+button.is-link.is-light {
+    background-color: #ebf8ff !important;
+}
