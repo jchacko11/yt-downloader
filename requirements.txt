@@ -6,4 +6,4 @@ Jinja2==2.11.2
 MarkupSafe==1.1.1
 typing-extensions==3.7.4.2
 Werkzeug==1.0.1
-git+https://github.com/nficano/pytube@e56d49c
+git+https://github.com/pytube/pytube
